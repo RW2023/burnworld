@@ -1,17 +1,18 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  mode: 'jit',  // Ensuring JIT mode is enabled
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-   daisyui: {
+  daisyui: {
     themes: true,
   },
   theme: {
     extend: {
-       colors: {
+      colors: {
         'overlay': 'rgba(142, 125, 190, 0.5)', /* tropical-indigo */
         'background': '#303633', /* onyx */
         'button': '#fca311', /* orange-web */
@@ -24,9 +25,9 @@ const config: Config = {
         'secondary': '#ffffff', /* white */
         'tertiary': '#fca311', /* orange-web */
       },
-     
     },
   },
-   plugins: [require("daisyui")],
-}
-export default config
+  plugins: [require("daisyui")],
+};
+
+export default config;
