@@ -1,6 +1,7 @@
 // Components/ArticleList.tsx
 import React from 'react';
 import Layout from './Layout';
+import Image from 'next/image';
 
 export type Article = {
   source: { id: string; name: string };
@@ -50,7 +51,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
                 {new Date(article.publishedAt).toLocaleDateString()}
               </span>
             </div>
-            <img
+            <Image
               src={article.urlToImage}
               alt={article.title}
               className="w-full rounded-lg mb-4"
