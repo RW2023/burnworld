@@ -1,7 +1,7 @@
 // pages/news.tsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ArticleList, { Article } from '../../Components/ArticleList'; 
+import ArticleList, { Article } from '../Components/ArticleList'; 
 
 const News: React.FC = () => {
   const [articles, setArticles] = useState<Article[] | undefined>(undefined); 
