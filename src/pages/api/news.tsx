@@ -1,3 +1,4 @@
+'use client'
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import cors from 'cors';
