@@ -1,11 +1,35 @@
-// pages/api/news.ts
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import cors from 'cors';
+
+// Initialize the cors middleware
+const corsHandler = cors({ methods: ['GET', 'HEAD'] });
+
+// Helper method to run middleware
+function runMiddleware(
+  req: NextApiRequest,
+  res: NextApiResponse,
+  fn: Function,
+) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result: any) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+
+      return resolve(result);
+    });
+  });
+}
 
 const handler = async (
   req: NextApiRequest,
   res: NextApiResponse,
 ): Promise<void> => {
+  // Run the cors middleware
+  await runMiddleware(req, res, corsHandler);
+
+  // Rest of the handler logic
   try {
     const response = await axios.get(
       `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.newsKey}`,
