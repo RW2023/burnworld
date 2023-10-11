@@ -1,5 +1,6 @@
 // components/Layout.tsx
 import React from 'react';
+import  styles from './Layout.module.css';
 
 type Props = {
   title: string;

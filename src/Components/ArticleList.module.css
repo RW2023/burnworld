@@ -9,6 +9,12 @@
     /* onyx */
 }
 
+@media screen and (max-width: 600px) {
+    .info {
+            font-size: 1.5rem;
+        }
+}
+
 @media (min-width: 768px) {
 
     /* 768px is typically the width at which tablets are targeted */
@@ -16,6 +22,7 @@
         grid-template-columns: 1fr 1fr;
         /* 2 columns on tablets */
     }
+ 
 }
 
 @media (min-width: 1024px) {
@@ -47,13 +54,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-    color: #303633;
+    color: var(--paragraph);
     /* onyx */
 }
 
 .description {
     margin-bottom: 0.5rem;
     color: var(--paragraph);
+    font-size: 1.5rem;
     /* platinum */
 }
 
