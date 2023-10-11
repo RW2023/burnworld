@@ -1,0 +1,23 @@
+/* src/Components/BackToTopButton.module.css */
+.backToTopButton {
+    background-color: var(--button);
+    color: var(--buttonText);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    /* Hidden by default */
+}
+
+.backToTopButton.visible {
+    display: block;
+}
+
+.button {
+    font-size: 4rem;
+    color: var(--button);
+}

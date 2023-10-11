@@ -1,5 +1,6 @@
 // components/Layout.tsx
 import React from 'react';
+import BackToTopButton from './BackToTopButton';
 
 
 type Props = {
@@ -14,6 +15,7 @@ const Layout: React.FC<Props> = ({ title, children }) => {
         <h1 className='text-center text-4xl text-headline'>{title}</h1>
       </header>
       <main>{children}</main>
+      <BackToTopButton />
     </div>
   );
 };
