@@ -17,14 +17,14 @@ export default function Home() {
         ></video>
         <div className="relative hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">AS THE WORLD BURNS</h1>
-            <p className="mb-5 text-2xl">Headlines from around the world</p>
+            <h1 className="mb-5 text-5xl font-bold text-headline">AS THE WORLD BURNS</h1>
+            <p className="mb-5 text-2xl text-headline">Headlines from around the world</p>
             <Link href="/news">
               <button
                 type="button"
                 className="btn btn-primary bg-button text-black hover:text-headline hover:bg-background"
               >
-                Read News
+                News Feed
               </button>
             </Link>
           </div>
