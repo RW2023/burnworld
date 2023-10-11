@@ -1,0 +1,64 @@
+/* ArticleList.module.css */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 column by default */
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: #303633;
+    /* onyx */
+}
+
+@media (min-width: 768px) {
+
+    /* 768px is typically the width at which tablets are targeted */
+    .container {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* 1024px is typically the width at which laptops are targeted */
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        /* 3 columns on laptops and above */
+    }
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: black;
+    /* white */
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--headline);
+    /* tropical-indigo */
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: #303633;
+    /* onyx */
+}
+
+.description {
+    margin-bottom: 0.5rem;
+    color: var(--paragraph);
+    /* platinum */
+}
+
+.link {
+    text-decoration: underline;
+    color: #fca311;
+    /* orange-web */
+}
