@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* ArticleList.tsx */
 import React from 'react';
 import Layout from './Layout';
