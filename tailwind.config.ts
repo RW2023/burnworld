@@ -24,6 +24,10 @@ module.exports = {
         secondary: '#8d99ae', // --cool-gray
         tertiary: '#000000', // --black
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans'],
+        serif: ['Roboto Slab', 'serif'],
+      },
     },
   },
   plugins: [require('daisyui')],
