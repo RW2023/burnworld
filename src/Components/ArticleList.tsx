@@ -47,10 +47,10 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               {article.title}
             </h2>
             <div className="flex justify-between mb-2 text-gray-400">
-              <span>
+              <span className='text-highlight'>
                 By {article.author} | {article.source.name}
               </span>
-              <span>
+              <span className='text-whitesmoke'>
                 Published on{' '}
                 {new Date(article.publishedAt).toLocaleDateString()}
               </span>
@@ -62,12 +62,12 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               height={1080}
               className="w-full rounded-lg mb-4"
             />
-            <p className="mb-2 text-gray-300 text-lg">{article.description}</p>
+            <p className="mb-2 text-paragraph text-lg">{article.description}</p>
             <a
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange-500 underline"
+              className="text-highlight underline"
             >
               Read more
             </a>
