@@ -36,7 +36,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
 
   return (
     <Layout title="Latest Headlines">
-      <div className="grid gap-6 p-4 bg-background md:grid-cols-2 lg:grid-cols-3 shadow-lg">
+      <div className="grid gap-6 p-4 bg-background md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto ">
         {filteredArticles.map((article, index) => (
           <div
             key={index}
