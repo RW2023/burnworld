@@ -1,7 +1,6 @@
 /* ArticleList.tsx */
 import React from 'react';
 import Layout from './Layout';
-import styles from './ArticleList.module.css'; // Import CSS Module
 
 export type Article = {
   source: { id: string; name: string };
@@ -37,11 +36,17 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
 
   return (
     <Layout title="Latest Headlines">
-      <div className={styles.container} data-theme="black">
+      {/* Updated class names to use Tailwind CSS and DaisyUI */}
+      <div className="grid gap-6 p-4 bg-gray-900 md:grid-cols-2 lg:grid-cols-3">
         {filteredArticles.map((article, index) => (
-          <div key={index} className={styles.card}>
-            <h2 className={styles.title}>{article.title}</h2>
-            <div className={styles.info}>
+          <div
+            key={index}
+            className="p-4 rounded-lg shadow-lg bg-black border border-white"
+          >
+            <h2 className="text-lg font-bold mb-2 text-white">
+              {article.title}
+            </h2>
+            <div className="flex justify-between mb-2 text-gray-400">
               <span>
                 By {article.author} | {article.source.name}
               </span>
@@ -57,12 +62,12 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               height={1080}
               className="w-full rounded-lg mb-4"
             />
-            <p className={styles.description}>{article.description}</p>
+            <p className="mb-2 text-gray-300 text-lg">{article.description}</p>
             <a
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.link}
+              className="text-orange-500 underline"
             >
               Read more
             </a>
