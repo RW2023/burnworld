@@ -2,19 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --overlay: rgba(184, 193, 236, 0.5);
-  --background: #232946;
-  --button: #ff8906;
-  --headline: #fffffe;
-  --paragraph: #b8c1ec;
-  --buttonText: #232946;
-  --stroke: #121629;
-  --main: #b8c1ec;
-  --highlight: #eebbc3;
-  --secondary: #fffffe;
-  --tertiary: #eebbc3;
-}
+
 
 body{
   font-family:'Roboto Slab', serif;
