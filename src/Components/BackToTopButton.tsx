@@ -34,7 +34,7 @@ const BackToTopButton: React.FC = () => {
           className={styles.button}
           aria-label="Back to Top"
         >
-          ↑
+          ☝🏾
         </button>
       )}
     </div>
