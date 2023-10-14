@@ -36,7 +36,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
 
   return (
     <Layout title="Latest Headlines">
-      <div className="grid gap-6 p-4 bg-background md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 p-4 bg-background md:grid-cols-2 lg:grid-cols-3 shadow-lg">
         {filteredArticles.map((article, index) => (
           <div
             key={index}
@@ -46,10 +46,11 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               {article.title}
             </h2>
             <div className="flex justify-between mb-2 text-paragraph">
-              <span className='text-highlight'>
-                By<span className='text-headline'> {article.author} | </span><span className='text-button'>{article.source.name}</span>
+              <span className="text-highlight">
+                By<span className="text-headline"> {article.author} | </span>
+                <span className="text-button">{article.source.name}</span>
               </span>
-              <span className='text-secondary'>
+              <span className="text-secondary">
                 Published on{' '}
                 {new Date(article.publishedAt).toLocaleDateString()}
               </span>
