@@ -10,9 +10,9 @@ type Props = {
 
 const Layout: React.FC<Props> = ({ title, children }) => {
   return (
-    <div>
+    <div className="p-2">
       <header>
-        <h1 className='text-center text-4xl text-headline'>{title}</h1>
+        <h1 className='text-center text-4xl text-headline mr-0'>{title}</h1>
       </header>
       <main>{children}</main>
       <BackToTopButton />
