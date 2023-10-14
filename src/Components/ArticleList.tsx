@@ -43,7 +43,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
             key={index}
             className="p-4 rounded-lg shadow-lg bg-black border border-white"
           >
-            <h2 className="text-lg font-bold mb-2 text-white">
+            <h2 className="text-lg font-bold mb-2 text-headline">
               {article.title}
             </h2>
             <div className="flex justify-between mb-2 text-gray-400">
@@ -62,7 +62,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               height={1080}
               className="w-full rounded-lg mb-4"
             />
-            <p className="mb-2 text-paragraph text-lg">{article.description}</p>
+            <p className="mb-2 text-main text-lg">{article.description}</p>
             <a
               href={article.url}
               target="_blank"
