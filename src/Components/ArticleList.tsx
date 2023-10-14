@@ -20,7 +20,7 @@ type Props = {
 const ArticleList: React.FC<Props> = ({ articles }) => {
   if (!articles) {
     return (
-      <Layout title="News">
+      <Layout title="Fetching the Latest Headlines">
         Loading articles. Please wait it might be a big dump.........💩
       </Layout>
     );
@@ -36,21 +36,20 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
 
   return (
     <Layout title="Latest Headlines">
-      {/* Updated class names to use Tailwind CSS and DaisyUI */}
-      <div className="grid gap-6 p-4 bg-gray-900 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 p-4 bg-background md:grid-cols-2 lg:grid-cols-3">
         {filteredArticles.map((article, index) => (
           <div
             key={index}
-            className="p-4 rounded-lg shadow-lg bg-black border border-white"
+            className="p-4 rounded-lg shadow-lg bg-tertiary border border-stroke"
           >
             <h2 className="text-lg font-bold mb-2 text-headline">
               {article.title}
             </h2>
-            <div className="flex justify-between mb-2 text-gray-400">
+            <div className="flex justify-between mb-2 text-paragraph">
               <span className='text-highlight'>
-                By {article.author} | {article.source.name}
+                By<span className='text-headline'> {article.author} | </span><span className='text-button'>{article.source.name}</span>
               </span>
-              <span className='text-whitesmoke'>
+              <span className='text-secondary'>
                 Published on{' '}
                 {new Date(article.publishedAt).toLocaleDateString()}
               </span>
@@ -62,12 +61,12 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               height={1080}
               className="w-full rounded-lg mb-4"
             />
-            <p className="mb-2 text-main text-lg">{article.description}</p>
+            <p className="mb-2 text-paragraph text-lg">{article.description}</p>
             <a
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-highlight underline"
+              className=" text-button hover:text-headline hover:text-opacity-100 hover:underline"
             >
               Read more
             </a>
