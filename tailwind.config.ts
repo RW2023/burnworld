@@ -12,17 +12,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        overlay: 'rgba(43, 45, 66, 0.5)', // --space-cadet with 50% opacity
-        background: '#2b2d42', // --space-cadet
-        button: '#f8f32b', // --aureolin
-        headline: '#ffffff', // --white
-        paragraph: '#8d99ae', // --cool-gray
-        buttonText: '#2b2d42', // --space-cadet
-        stroke: '#8d99ae', // --cool-gray
-        main: '#f8f32b', // --aureolin
-        highlight: '#f8f32b', // --aureolin
-        secondary: '#8d99ae', // --cool-gray
-        tertiary: '#000000', // --black
+        overlay: '#f7f7f2ff', // Baby Powder
+        background: '#121113ff', // Night
+        button: '#899878ff', // Moss Green
+        headline: '#e4e6c3ff', // Beige
+        paragraph: '#f7f7f2ff', // Baby Powder
+        buttonText: '#121113ff', // Night
+        stroke: '#222725ff', // Eerie Black
+        main: '#e4e6c3ff', // Beige
+        highlight: '#899878ff', // Moss Green
+        secondary: '#f7f7f2ff', // Baby Powder
+        tertiary: '#222725ff', // Eerie Black
       },
       fontFamily: {
         sans: ['Poppins', 'sans'],
