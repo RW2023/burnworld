@@ -17,7 +17,7 @@ export default function Home() {
         ></video>
         <div className="relative hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold text-headline">AS THE WORLD BURNS</h1>
+            <h1 className="mb-5 text-5xl font-bold text-headline text-stroke-black">AS THE WORLD BURNS</h1>
             <p className="mb-5 text-2xl text-headline">Headlines from around the world</p>
             <Link href="/news">
               <button
