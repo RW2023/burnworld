@@ -41,7 +41,7 @@ const Navbar = () => {
         <a className="btn btn-ghost normal-case text-xl">Burn World News</a>
       </div>
       <div className="navbar-end">
-        <button type='button' title='button' className="btn btn-ghost btn-circle">
+        {/* <button type='button' title='button' className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -75,7 +75,7 @@ const Navbar = () => {
             </svg>
             <span className="badge badge-xs badge-primary indicator-item"></span>
           </div>
-        </button>
+        </button> */}
       </div>
     </div>
   );
