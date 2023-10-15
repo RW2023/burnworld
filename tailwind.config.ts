@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         overlay: '#f4fff8ff', // Mint Cream
         background: '#000f08ff', // Night
-        button: '#8baaadff', // Cadet Gray
+        button: '#F8F32B', // Cadet Gray
         headline: '#f4fff8ff', // Mint Cream
         paragraph: '#8baaadff', // Cadet Gray
         buttonText: '#000f08ff', // Night
