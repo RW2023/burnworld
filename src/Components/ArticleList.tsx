@@ -41,7 +41,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
         {filteredArticles.map((article, index) => (
           <div
             key={index}
-            className="p-4 rounded-lg shadow-lg bg-background border border-stroke"
+            className="p-4 rounded-lg shadow-lg bg-background border border-headline"
           >
             <h2 className="text-lg font-bold mb-2 text-headline">
               {article.title}
@@ -49,7 +49,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
             <div className="flex justify-between mb-2 text-paragraph">
               <span className="text-highlight">
                 By<span className="text-headline"> {article.author} | </span>
-                <span className="text-button">{article.source.name}</span>
+                <span className="text-button font-sans">{article.source.name}</span>
               </span>
               <span className="text-secondary">
                 Published on{' '}
