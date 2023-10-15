@@ -41,7 +41,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
         {filteredArticles.map((article, index) => (
           <div
             key={index}
-            className="p-4 rounded-lg shadow-lg bg-tertiary border border-stroke"
+            className="p-4 rounded-lg shadow-lg bg-background border border-stroke"
           >
             <h2 className="text-lg font-bold mb-2 text-headline">
               {article.title}
