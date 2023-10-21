@@ -1,8 +1,6 @@
 // components/Layout.tsx
 import React from 'react';
 import BackToTopButton from './BackToTopButton';
-import Footer from './Footer';
-
 
 type Props = {
   title: string;
@@ -26,8 +24,6 @@ const Layout: React.FC<Props> = ({ title, children }) => {
       </header>
       <main>{children}</main>
       <BackToTopButton />
-
-      <Footer />
     </div>
   );
 };
