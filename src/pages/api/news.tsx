@@ -1,4 +1,3 @@
-'use client'
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import cors from 'cors';
@@ -17,7 +16,6 @@ function runMiddleware(
       if (result instanceof Error) {
         return reject(result);
       }
-
       return resolve(result);
     });
   });
@@ -30,10 +28,13 @@ const handler = async (
   // Run the cors middleware
   await runMiddleware(req, res, corsHandler);
 
+  // Get the country parameter from the request query or default to 'us'
+  const country = req.query.country ? req.query.country.toString() : 'us';
+
   // Rest of the handler logic
   try {
     const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.newsKey}`,
+      `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.newsKey}`,
     );
     res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
     res.status(200).json(response.data);
