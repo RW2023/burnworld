@@ -26,19 +26,19 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
       </Layout>
     );
   }
+  // const filteredArticles = articles.filter((article) => {
+  //   return (
+  //     article.author &&
+  //     article.source.name &&
+  //     new Date(article.publishedAt).getFullYear() > 1970
+  //   );
+  // });
 
-  const filteredArticles = articles.filter((article) => {
-    return (
-      article.author &&
-      article.source.name &&
-      new Date(article.publishedAt).getFullYear() > 1970
-    );
-  });
 
   return (
     <Layout title="Latest Headlines">
       <div className="grid gap-6 p-4 bg-highlight md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto ">
-        {filteredArticles.map((article, index) => (
+        {articles.map((article, index) => (
           <div
             key={index}
             className="p-4 rounded-lg shadow-lg bg-background border border-headline"
@@ -49,7 +49,9 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
             <div className="flex justify-between mb-2 text-paragraph">
               <span className="text-white-800">
                 By<span className="text-headline"> {article.author} | </span>
-                <span className="text-button font-sans">{article.source.name}</span>
+                <span className="text-button font-sans">
+                  {article.source.name}
+                </span>
               </span>
               <span className="text-secondary">
                 Published on{' '}
@@ -57,12 +59,11 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               </span>
             </div>
             <img
-              src={article.urlToImage}
+              src={article.urlToImage || 'imagePlaceHolder.png'}
               alt={article.title}
-              width={1080}
-              height={1080}
-              className="w-full rounded-lg mb-4"
+              className="w-full rounded-lg mb-4 object-cover"
             />
+
             <p className="mb-2 text-paragraph text-lg">{article.description}</p>
             <a
               href={article.url}
