@@ -11,17 +11,17 @@ const CanadianNews: React.FC = () => {
         const response = await axios.get('/api/news?country=ca');
         const allArticles = response.data.articles;
 
-        // Filter articles based on criteria
-        const articlesWithBoth = allArticles.filter(
-          (article: Article) => article.description && article.urlToImage,
-        );
-        const articlesWithNoImage = allArticles.filter(
-          (article: Article) => article.description && !article.urlToImage,
-        );
+        // // Filter articles based on criteria
+        // const articlesWithBoth = allArticles.filter(
+        //   (article: Article) => article.description && article.urlToImage,
+        // );
+        // const articlesWithNoImage = allArticles.filter(
+        //   (article: Article) => article.description && !article.urlToImage,
+        // );
 
         // Combine the filtered articles, placing articles with no image at the end
-        const sortedArticles = [...articlesWithBoth, ...articlesWithNoImage];
-        setArticles(sortedArticles);
+       
+        setArticles(allArticles);
       } catch (error) {
         if (error instanceof Error) {
           console.error('Error fetching Canadian news data:', error.message);
