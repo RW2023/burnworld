@@ -26,19 +26,21 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
       </Layout>
     );
   }
-  // const filteredArticles = articles.filter((article) => {
-  //   return (
-  //     article.author &&
-  //     article.source.name &&
-  //     new Date(article.publishedAt).getFullYear() > 1970
-  //   );
-  // });
+const filteredArticles = articles.filter((article) => {
+  return (
+    // article.author &&
+    // article.source.name &&
+    // new Date(article.publishedAt).getFullYear() > 1970 &&
+    article.title !== '[Removed]'
+  );
+});
+
 
 
   return (
     <Layout title="Latest Headlines">
       <div className="grid gap-6 p-4 bg-highlight md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto ">
-        {articles.map((article, index) => (
+        {filteredArticles.map((article, index) => (
           <div
             key={index}
             className="p-4 rounded-lg shadow-lg bg-background border border-headline"
