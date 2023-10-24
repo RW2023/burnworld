@@ -12,7 +12,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <main>
          
          <h1 className="text-3xl text-center text-font-bold">
-            Canadian Headlines
+            Canadian News
           </h1> {children} 
           
         </main>
