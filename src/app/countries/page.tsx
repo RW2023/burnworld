@@ -9,7 +9,7 @@ interface Props {}
 const Index: FC<Props> = (): JSX.Element => {
   return (
     <Layout title={'Countries'}>
-      <div>
+      <div className='min-h-screen'>
        <h1>Countries</h1>
       </div>
     </Layout>
