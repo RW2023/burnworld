@@ -37,51 +37,48 @@ const filteredArticles = articles.filter((article) => {
 
 
 
-  return (
-    <Layout title="Latest Headlines">
-      <div className="grid gap-6 p-4 bg-highlight md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto ">
-        {filteredArticles.map((article, index) => (
-          <div
-            key={index}
-            className="p-4 rounded-lg shadow-lg bg-background border border-headline"
-          >
-            <h2 className="text-lg font-bold mb-2 text-headline">
-              {article.title}
-            </h2>
-            <div className="flex justify-between mb-2 text-paragraph">
-              <span className="text-white-800">
-                By<span className="text-headline"> {article.author} | </span>
-                <span className="text-button font-sans">
-                  {article.source.name}
-                </span>
+return (
+  <Layout title="Latest Headlines">
+    <div className="grid gap-6 p-4 bg-highlight grid-cols-1 md:grid-cols-2 lg:grid-cols-3 shadow-lg mr-auto ">
+      {filteredArticles.map((article, index) => (
+        <div
+          key={index}
+          className="p-4 rounded-lg shadow-lg bg-background border border-headline"
+        >
+          <h2 className="text-base md:text-lg font-bold mb-2 text-headline">
+            {article.title}
+          </h2>
+          <div className="flex justify-between mb-2 text-paragraph">
+            <span className="text-white-800">
+              By<span className="text-headline"> {article.author} | </span>
+              <span className="text-button font-sans">
+                {article.source.name}
               </span>
-              <span className="text-secondary">
-                Published on{' '}
-                {new Date(article.publishedAt).toLocaleDateString()}
-              </span>
-            </div>
-            <img
-              src={article.urlToImage || 'imagePlaceHolder.png'}
-              alt={article.title}
-              width={300} // Adjust dimensions as needed
-              height={300}
-              className="w-full rounded-lg mb-4 object-cover"
-            />
-
-            <p className="mb-2 text-paragraph text-lg">{article.description}</p>
-            <a
-              href={article.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" text-button hover:text-headline hover:text-opacity-100 hover:underline"
-            >
-              Read more
-            </a>
+            </span>
+            <span className="text-secondary">
+              Published on {new Date(article.publishedAt).toLocaleDateString()}
+            </span>
           </div>
-        ))}
-      </div>
-    </Layout>
-  );
+          <img
+            src={article.urlToImage || 'imagePlaceHolder.png'}
+            alt={article.title}
+            className="w-full rounded-lg mb-4 object-cover"
+          />
+          <p className="mb-2 text-paragraph text-lg">{article.description}</p>
+          <a
+            href={article.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" text-button hover:text-headline hover:text-opacity-100 hover:underline"
+          >
+            Read more
+          </a>
+        </div>
+      ))}
+    </div>
+  </Layout>
+);
+
 };
 
 export default ArticleList;
