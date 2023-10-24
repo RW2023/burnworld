@@ -10,7 +10,7 @@ export default function CountriesNav({}: Props) {
     <nav className="sticky top-0 flex flex-row justify-center bg-gray-800 text-white p-4 text-center">
         <ul className="flex flex-row space-x-4 justify-center">
           <li>
-            <Link href="/news">US</Link>
+            <Link href="/us">US</Link>
           </li>
           <li>
             <Link href="/canada">Canada</Link>
@@ -19,7 +19,7 @@ export default function CountriesNav({}: Props) {
                 <Link href="/jamaica">Jamaica</Link>
             </li>
           <li>
-            <Link href="/news">Headlines</Link>
+            <Link href="/us">Headlines</Link>
           </li>
         </ul>
       </nav>
