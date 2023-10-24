@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ArticleList, { Article } from '../Components/ArticleList';
+import ArticleList, { Article } from '../../Components/ArticleList';
+import Layout from './Layout'
 
 const CanadianNews: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]); // Set default state to an empty array
@@ -33,7 +34,10 @@ const CanadianNews: React.FC = () => {
     fetchData();
   }, []);
 
-  return <ArticleList articles={articles} />;
+  return (
+  <Layout>
+    <ArticleList articles={articles} />
+  </Layout>);
 };
 
 export default CanadianNews;
