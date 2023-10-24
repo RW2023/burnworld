@@ -1,6 +1,8 @@
 // components/Layout.tsx
 import React from 'react';
 import BackToTopButton from './BackToTopButton';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 type Props = {
   title: string;
@@ -22,8 +24,10 @@ const Layout: React.FC<Props> = ({ title, children }) => {
         <h1 className="text-center text-4xl text-headline mr-0">{title}</h1>
         <title>Burn World News</title>
       </header>
+      <Navbar />
       <main>{children}</main>
       <BackToTopButton />
+      <Footer />
     </div>
   );
 };

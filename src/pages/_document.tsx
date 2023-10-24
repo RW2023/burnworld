@@ -1,8 +1,7 @@
 // src/pages/_document.tsx
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import Navbar from '@/Components/Navbar';
-import Footer from '@/Components/Footer';
+
 
 
 class MyDocument extends Document {
@@ -15,12 +14,12 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <Navbar />
+        
         <body>
           <Main />
           <NextScript />
         </body>
-        <Footer />
+        
       </Html>
     );
   }
