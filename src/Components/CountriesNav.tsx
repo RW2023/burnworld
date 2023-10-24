@@ -15,9 +15,9 @@ export default function CountriesNav({}: Props) {
           <li>
             <Link href="/canada">Canada</Link>
           </li>
-            <li>
+            {/* <li>
                 <Link href="/jamaica">Jamaica</Link>
-            </li>
+            </li> */}
           <li>
             <Link href="/us">Headlines</Link>
           </li>
