@@ -63,6 +63,8 @@ const filteredArticles = articles.filter((article) => {
             <img
               src={article.urlToImage || 'imagePlaceHolder.png'}
               alt={article.title}
+              width={300} // Adjust dimensions as needed
+              height={300}
               className="w-full rounded-lg mb-4 object-cover"
             />
 
