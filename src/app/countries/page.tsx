@@ -1,9 +1,19 @@
+'use client';
 import { FC } from 'react';
+import Layout from '../../Components/Layout';
+
+
 
 interface Props {}
 
-const index: FC<Props> = (props): JSX.Element => {
-  return <div>Countries</div>;
+const Index: FC<Props> = (): JSX.Element => {
+  return (
+    <Layout title={'Countries'}>
+      <div>
+       <h1>Countries</h1>
+      </div>
+    </Layout>
+  );
 };
 
-export default index;
+export default Index;
