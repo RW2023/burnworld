@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
+
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -32,13 +33,13 @@ const Navbar = () => {
               <Link href="/news">Headlines</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/countries">countries</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-xl">Burn World News</a>
+        <Link href='/news'className="btn btn-ghost normal-case text-xl">Burn World News</Link>
       </div>
       <div className="navbar-end">
         {/* <button type='button' title='button' className="btn btn-ghost btn-circle">
