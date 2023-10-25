@@ -17,7 +17,7 @@ const Index: FC<Props> = (): JSX.Element => {
                 <div className="bg-background rounded-lg shadow-lg p-6">
                   <div className="text-center">
                     <h2 className="text-2xl font-bold mb-2">
-                      Canadian New Headlines
+                      Canadian News Headlines
                     </h2>
                   </div>
                   <div className="mt-4">
@@ -27,13 +27,13 @@ const Index: FC<Props> = (): JSX.Element => {
                         height={300}
                         src="/canadaFlagIcon.png"
                         alt="flag"
-                        className="w-full h-auto"
+                        className="w-full h-auto hover:border-2 hover:border-button rounded"
                       />
                     </Link>
                   </div>
                   <div className="mt-4">
                     <p className="text-headline text-lg text-center">
-                      Latest stories from the  Canadian press
+                      Latest stories from the Canadian press
                     </p>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ const Index: FC<Props> = (): JSX.Element => {
                         width={300}
                         src="/americanFlagIcon.png"
                         alt="flag"
-                        className="w-full h-auto"
+                        className="w-full h-auto hover:border-2 hover:border-button rounded"
                       />
                     </Link>
                   </div>
