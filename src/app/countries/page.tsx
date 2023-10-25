@@ -32,7 +32,7 @@ const Index: FC<Props> = (): JSX.Element => {
                     </Link>
                   </div>
                   <div className="mt-4">
-                    <p className="text-headline text-lg text-center font-bold">
+                    <p className="text-headline text-lg text-center">
                       Latest stories from the  Canadian press
                     </p>
                   </div>
