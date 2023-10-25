@@ -1,9 +1,8 @@
 'use client';
 import { FC } from 'react';
 import Layout from '../../Components/Layout';
-import NextImage from 'next/image';
-
-
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface Props {}
 
@@ -11,48 +10,62 @@ const Index: FC<Props> = (): JSX.Element => {
   return (
     <Layout title={'Countries'}>
       <div className="min-h-screen bg-background">
-        {/* <h1 className="text-headline">Countries</h1>
-        <div className="min-h-screen">
-          <div className="country p-4 bg-main rounded-lg shadow-lg mb-6">
-            <NextImage
-              src="/images/burningGlobe.png"
-              alt="other country"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-            <div className="text-container mt-4">
-              <h2 className="text-highlight">US</h2>
-              <p className="text-paragraph">US Headlines</p>
+        <div className="min-h-screen bg-background">
+          <div className="container mx-auto">
+            <div className="flex flex-wrap -mx-4">
+              <div className="w-full md:w-1/2 px-4">
+                <div className="bg-background rounded-lg shadow-lg p-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold mb-2">
+                      Canadian New Headlines
+                    </h2>
+                  </div>
+                  <div className="mt-4">
+                    <Link href="/canada">
+                      <Image
+                        width={300}
+                        height={300}
+                        src="/canadaFlagIcon.png"
+                        alt="flag"
+                        className="w-full h-auto"
+                      />
+                    </Link>
+                  </div>
+                  <div className="mt-4">
+                    <p className="text-headline text-lg text-center font-bold">
+                      Latest stories from Canadian press
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 px-4">
+                <div className="bg-background rounded-lg shadow-lg p-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold mb-2">
+                      US News Headlines
+                    </h2>
+                  </div>
+                  <div className="mt-4">
+                    <Link href="/us">
+                      <Image
+                        height={300}
+                        width={300}
+                        src="/americanFlagIcon.png"
+                        alt="flag"
+                        className="w-full h-auto"
+                      />
+                    </Link>
+                  </div>
+                  <div className="mt-4">
+                    <p className="text-headline text-lg text-center text-font-bold">
+                      Latest headlines from the American Press
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="country p-4 bg-main rounded-lg shadow-lg mb-6">
-            <NextImage
-              src=""
-              alt="Country 2"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-            <div className="text-container mt-4">
-              <h2 className="text-highlight">Country 2</h2>
-              <p className="text-paragraph">Description of Country 2</p>
-            </div>
-          </div>
-          <div className="country p-4 bg-main rounded-lg shadow-lg mb-6">
-            <NextImage
-              src=""
-              alt="Country 3"
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-            <div className="text-container mt-4">
-              <h2 className="text-highlight">Country 3</h2>
-              <p className="text-paragraph">Description of Country 3</p>
-            </div>
-          </div>
-        </div> */}
+        </div>
       </div>
     </Layout>
   );
