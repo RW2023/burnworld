@@ -23,7 +23,7 @@ const Layout: React.FC<Props> = ({ title, children }) => {
             name="keywords"
             content="news, headlines, world, international, local, politics, business"
           />
-          <meta property="og:image" content="https://burnworld.vercel.app/logo.png" />
+          <meta property="og:image" content="https://burnworld.vercel.app/explodingGlobe.png" />
           <meta name="author" content="Ryan Wilson" />
           <h1 className="text-center text-4xl text-headline mr-0">{title}</h1>
           <title>Burn World News</title>
