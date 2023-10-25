@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 sticky top-0 z-50 w-full">
+    <div className="navbar bg-base-100 sticky top-0 z-50 w-full" data-theme="black">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -24,7 +25,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-background rounded-box w-52 text-headline  hover:text-button"
           >
             <li>
               <Link href="/">Home</Link>
@@ -39,7 +40,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <Link href='/us'className="btn btn-ghost normal-case text-xl">Burn World News</Link>
+        <Link href="/us" className="btn btn-ghost normal-case text-xl">
+          Burn World News
+        </Link>
       </div>
       <div className="navbar-end">
         {/* <button type='button' title='button' className="btn btn-ghost btn-circle">
