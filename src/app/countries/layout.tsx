@@ -1,4 +1,4 @@
-import CountriesNav from '@/Components/CountriesNav';
+// import CountriesNav from '@/Components/CountriesNav';
 
 export default function RootLayout({
   children,
@@ -11,7 +11,7 @@ export default function RootLayout({
         <title>News By Country</title>
       </head>
       <body>
-        <CountriesNav />
+        {/* <CountriesNav /> */}
         {children}
       </body>
     </html>
