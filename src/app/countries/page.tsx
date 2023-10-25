@@ -33,7 +33,7 @@ const Index: FC<Props> = (): JSX.Element => {
                   </div>
                   <div className="mt-4">
                     <p className="text-headline text-lg text-center font-bold">
-                      Latest stories from Canadian press
+                      Latest stories from the  Canadian press
                     </p>
                   </div>
                 </div>
