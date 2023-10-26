@@ -99,7 +99,11 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
             >
               Read more
             </a>
-            <div className="flex flex-wrap -mx-2 mt-4">
+            <div className="flex flex-wrap -mx-2 mt-4 md:flex-col lg:flex-col border border-highlight rounded-t bg-background justify-center">
+              <div className="flex items-end text-center  justify-center text-lg align-middle">
+                <p className='md:mb-1 p-1'>Share</p>
+              </div>
+
               <div className="px-2 w-full sm:w-auto">
                 <button
                   type="button"
@@ -109,7 +113,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
                   className="flex justify-center items-center px-4 py-2 w-full bg-background text-headline rounded hover:bg-blue-900"
                 >
                   <span className="flex items-center">
-                    <i className="fab fa-facebook-f mr-2"></i> Share on Facebook
+                    <i className="fab fa-facebook-f mr-2"></i> Facebook
                   </span>
                 </button>
               </div>
@@ -122,7 +126,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
                   className="flex justify-center items-center px-4 py-2 w-full bg-background text-headline rounded hover:bg-blue-900"
                 >
                   <span className="flex items-center">
-                    <i className="fab fa-twitter mr-2"></i> Share on Twitter
+                    <i className="fab fa-twitter mr-2"></i> Twitter
                   </span>
                 </button>
               </div>
@@ -135,7 +139,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
                   className="flex justify-center items-center px-4 py-2 w-full bg-background text-headline rounded hover:bg-blue-900"
                 >
                   <span className="flex items-center">
-                    <i className="fab fa-linkedin-in mr-2"></i> Share on
+                    <i className="fab fa-linkedin-in mr-2"></i>
                     LinkedIn
                   </span>
                 </button>
