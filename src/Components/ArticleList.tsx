@@ -101,7 +101,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
             </a>
             <div className="flex flex-wrap -mx-2 mt-4 md:flex-col lg:flex-col border border-highlight rounded-t bg-background justify-center">
               <div className="flex items-end text-center  justify-center text-lg align-middle">
-                <p className='md:mb-1 p-1'>Share</p>
+                <p className="md:mb-1 p-1">Share</p>
               </div>
 
               <div className="px-2 w-full sm:w-auto">
