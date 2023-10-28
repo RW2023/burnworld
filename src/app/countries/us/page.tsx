@@ -2,7 +2,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ArticleList, { Article } from '../../../Components/ArticleList'; 
+import ArticleList, { Article } from '@/Components/ArticleList'; 
 import Layout from './Layout';
 
 const News: React.FC = () => {
