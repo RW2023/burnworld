@@ -90,7 +90,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               </span>
             </div>
             <img
-              src={article.urlToImage || 'imagePlaceHolder.png'}
+              src={article.urlToImage || '/imagePlaceHolder.png'}
               alt={article.title}
               className="w-full rounded-lg mb-4 object-cover"
             />
