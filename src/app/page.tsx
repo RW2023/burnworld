@@ -1,4 +1,5 @@
 
+'use client';
 import Link from 'next/link';
 
 
@@ -18,7 +19,7 @@ export default function Home() {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold text-headline text-stroke-black">AS THE WORLD BURNS</h1>
             <p className="mb-5 text-2xl text-headline">Headlines from around the world</p>
-            <Link href="/us">
+            <Link href="/countries/us">
               <button
                 type="button"
                 className="btn btn-primary bg-button text-black hover:text-headline hover:bg-background"

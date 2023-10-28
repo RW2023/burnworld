@@ -1,5 +1,6 @@
+'use client';
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 
 const Navbar = () => {
@@ -31,7 +32,7 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/us">Headlines</Link>
+              <Link href="/countries/us">Headlines</Link>
             </li>
             <li>
               <Link href="/countries">countries</Link>
@@ -40,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <Link href="/us" className="btn btn-ghost normal-case text-xl">
+        <Link href="/countries/us" className="btn btn-ghost normal-case text-xl">
           Burn World News
         </Link>
       </div>

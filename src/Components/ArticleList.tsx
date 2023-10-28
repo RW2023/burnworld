@@ -53,8 +53,12 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
   if (!articles) {
     return (
       <Layout title="Fetching the Latest Headlines">
-        Loading articles. Please wait it might be a big dump.........💩
-      </Layout>
+            <div className='h-screen flex items-center justify-center text-center' style={{height: '75vh'}}>
+              <p className="text-lg md:text-xl lg:text-2xl sm:-mx-4">
+                Loading articles. Please wait it might be a big dump.........💩
+              </p>
+            </div>
+          </Layout>
     );
   }
 
@@ -86,7 +90,7 @@ const ArticleList: React.FC<Props> = ({ articles }) => {
               </span>
             </div>
             <img
-              src={article.urlToImage || 'imagePlaceHolder.png'}
+              src={article.urlToImage || '/imagePlaceHolder.png'}
               alt={article.title}
               className="w-full rounded-lg mb-4 object-cover"
             />

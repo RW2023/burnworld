@@ -8,7 +8,7 @@ interface Props {}
 
 const Index: FC<Props> = (): JSX.Element => {
   return (
-    <Layout title={'Countries'}>
+    <Layout title='News By Country'>
       <div className="min-h-screen bg-background">
         <div className="min-h-screen bg-background">
           <div className="container mx-auto">
@@ -21,7 +21,7 @@ const Index: FC<Props> = (): JSX.Element => {
                     </h2>
                   </div>
                   <div className="mt-4">
-                    <Link href="/canada">
+                    <Link href="/countries/canada">
                       <Image
                         width={300}
                         height={300}
@@ -46,7 +46,7 @@ const Index: FC<Props> = (): JSX.Element => {
                     </h2>
                   </div>
                   <div className="mt-4">
-                    <Link href="/us">
+                    <Link href="countries/us">
                       <Image
                         height={300}
                         width={300}
