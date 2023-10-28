@@ -8,7 +8,7 @@ interface Props {}
 
 const Index: FC<Props> = (): JSX.Element => {
   return (
-    <Layout title={'Countries'}>
+    <Layout title='News By Country'>
       <div className="min-h-screen bg-background">
         <div className="min-h-screen bg-background">
           <div className="container mx-auto">
