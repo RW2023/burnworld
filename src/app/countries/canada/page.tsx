@@ -1,8 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ArticleList, { Article } from '../../../Components/ArticleList';
+import ArticleList, { Article } from '@/Components/ArticleList';
 import Layout from './Layout'
+
 
 const CanadianNews: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]); // Set default state to an empty array
