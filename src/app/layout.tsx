@@ -1,3 +1,4 @@
+import Navbar from '@/Components/Navbar';
 import './globals.css';
 import Head from 'next/head';
 import type { ReactNode } from 'react';
@@ -29,7 +30,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
       </Head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        </body>
     </html>
   );
 }
