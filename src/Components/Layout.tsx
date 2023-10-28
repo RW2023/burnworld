@@ -23,15 +23,31 @@ const Layout: React.FC<Props> = ({ title, children }) => {
             name="keywords"
             content="news, headlines, world, international, local, politics, business"
           />
-          <meta property="og:image" content="https://burnworld.vercel.app/explodingGlobe.png" />
+          <meta
+            property="og:image"
+            content="https://burnworld.vercel.app/explodingGlobe.png"
+          />
           <meta name="author" content="Ryan Wilson" />
+          <link
+            rel="icon"
+            href="/favicon_io/favicon-32x32.png"
+            sizes="32x32"
+            type="image/png"
+          />
+          <link
+            rel="apple-touch-icon"
+            href="/favicon_io/apple-touch-icon.png"
+          />
+          <link rel="manifest" href="/favicon_io/site.webmanifest" />
+
+          <title>{title}</title>
           <h1 className="text-center text-4xl text-headline mr-0">{title}</h1>
-          <title>Burn World News</title>
-          <div className="flex justify-center">
-            <div
+          
+          {/* <div className="flex justify-center"> */}
+            {/* <div
               className="fixed top-0 left-0 w-full h-1/2 bg-cover bg-no-repeat bg-center z-[-1] "
               style={{ backgroundImage: "url('/burningGlobe.png')" }}
-            ></div>
+            ></div> */}
             {/* <Image
               src="/logo.png"
               alt="Logo"
@@ -39,7 +55,7 @@ const Layout: React.FC<Props> = ({ title, children }) => {
               width="200"
               height="50"
             /> */}
-          </div>
+          {/* </div> */}
         </header>
 
         <main>{children}</main>
