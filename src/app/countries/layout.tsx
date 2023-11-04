@@ -6,6 +6,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="black">
+      <title>News By Country</title>
       <body>
         {children}
       </body>
