@@ -1,33 +1,25 @@
-
 'use client';
 import Link from 'next/link';
 
 
+
 export default function Home() {
   return (
-    <div className="hero-overlay bg-opacity-80">
-      <div className="relative hero min-h-screen">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 object-cover w-full h-full"
-          src="/earth.mp4"
-        ></video>
-        <div className="relative hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold text-headline text-stroke-black">AS THE WORLD BURNS</h1>
-            <p className="mb-5 text-2xl text-headline">Headlines from around the world</p>
-            <Link href="/countries/us">
-              <button
-                type="button"
-                className="btn btn-primary bg-button text-black hover:text-headline hover:bg-background"
-              >
-                News Feed
-              </button>
-            </Link>
-          </div>
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage:
+          'url(/hero.png)',
+      }}
+    >
+      <div className="hero-overlay"></div>
+      <div className="hero-content text-center text-neutral-content">
+        <div className="max-w-md">
+          <h1 className="mb-5 text-5xl font-bold">Burn World News</h1>
+        <h2>Headline From Around The World</h2>
+          <Link
+          href="/countries/us"
+          ><button className="btn btn-primary">Read News</button></Link>
         </div>
       </div>
     </div>
