@@ -16,7 +16,7 @@ export default function Home() {
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Burn World News</h1>
-        <h2>Headline From Around The World</h2>
+        <h2>Headlines From Around The World</h2>
           <Link
           href="/countries/us"
           ><button className="btn btn-primary">Read News</button></Link>
